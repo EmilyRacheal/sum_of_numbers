@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100000px;">
+
+
+
+
+
+
+    <script type="text/javascript">
+ window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 500 ) {
+        addingNumbers()
+    }
+})
+    function addingNumbers() {
+        let cases, num, rem;
+        cases = parseInt(prompt("Enter Amount Of Times You Want This Programe to run or calculate"))
+        while (isNaN(cases) || cases == "" || (cases < 1 || cases > 1000)){
+            alert("Please complete Your Mission")
+            cases = parseInt(prompt("Enter Text Case"))
+        }
+        for (let count = 0; count < cases; count++){
+            num = parseInt(prompt("Enter A number from 1 to 100000"))
+            while (isNaN(num) || num == "" || (num < 1 || num > 100000)){
+                alert("please complete your mission");
+            num = parseInt(prompt("Enter A number from 1 to 100000"))
+            }
+            
+            var add = 0
+            do {
+            rem = num%10;
+            add += rem;
+            add = add;
+
+            num = parseInt(num/10);
+        }while (num != 0)
+        document.write(add + '<br>');
+
+    }
+    }
+        
+
+        
+
+        
+
+    </script> 
+</body>
+</html>
